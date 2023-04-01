@@ -21,11 +21,11 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('fetch:apidata')->twiceDaily(1, 13); // update every 12hours at 1 and 13
-        // $schedule->command('update:authors')->twiceDaily('13:01'); // update every 12hours at 1:01pm immediately after the first cron
+        $schedule->command('fetch:apidata')->twiceDaily(1, 13); // update every 12hours at 1 and 13
+        $schedule->command('update:authors')->twiceDaily(); // update every 12hours at 1:01pm immediately after the first cron
 
-        $schedule->command('fetch:apidata')->everyMinute();
-        $schedule->command('update:authors')->everyMinute();
+        // $schedule->command('fetch:apidata')->everyMinute(); // just for test
+        // $schedule->command('update:authors')->everyMinute();
     }
 
     /**
