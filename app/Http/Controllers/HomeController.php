@@ -70,7 +70,7 @@ class HomeController extends Controller
                 'status' => "success",
                 'message' => 'Data retrieved',
                 'data' => ""
-            ],500);
+            ],200);
         }
         return response()->json([
             'status' => "error",
